@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me!</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+  <audio id="hoverSound" preload="auto">
+    <source src="hover sound.wav">
+  </audio>
+  <!-- <audio id="clickSound">
+    <source src="click sound.wav">
+  </audio> -->
+  <header>
+    <h1 class="item">Hello! How can I help you? ☺︎</h1>
+    <a href="https://github.com/katherinewan" target="_blank"><img class="item" src="icon.jpeg" alt="my icon" width="200px" height="200px"></a>
+  </header>
+  <main>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="ca69a74d-ec6d-49c4-853f-ccad6977cd51">
+      <div class="separator">
+        <div class="input-field field">
+          <input type="text" id="name" class="item" name="name" placeholder="Name" autocomplete="off" required>
+        </div>
+        <div class="input-field field">
+          <input type="email" id="email" class="item" name="email" placeholder="Email Address" autocomplete="off" required>
+        </div>
+      </div>
+
+      <div class="separator">
+        <div class="input-field field">
+          <input type="tel" id="phone" class="item" name="phone" placeholder="Phone Number" autocomplete="off" required>
+        </div>
+        <!-- Selector -->
+        <div class="select-container field">
+          <select class="select-box item" name="pronouns" autocomplete="off" required>
+            <button>
+              <selectedcontent></selectedcontent>
+              <span class="picker"></span>
+            </button>
+            <option value="" disabled selected hidden>Pronouns</option>
+            <option value="she_her">She/Her</option>
+            <option value="he_him">He/Him</option>
+            <option value="they_them">They/Them</option>
+            <option value="unknown">Don't specify</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="textarea-field field">
+        <textarea name="" id="message" class="item" name="message" cols="30" rows="10" placeholder="Write your message!" autocomplete="off" required></textarea>
+     </div>
+      <button id="submit" class="item">Send Message</button>
+    </form>
+  </main>
+  <footer>
+    <p><span class="fish">𓆝 𓆟 𓆞 𓆝 𓆟</span>  Made by <a href="https://github.com/katherinewan" target="_blank">KatherineWan</a> <span class="fish">𓆝 𓆟 𓆞 𓆝 𓆟</span></p>
+  </footer>
+  <script>
+    const hoverOne = $("#hoverSound")[0];
+    $(".item").mouseover(function() {
+      hoverOne.play();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Mono:wght@100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  text-align: center;
+  align-items: center;
+}
+
+body {
+  display: inline-block;
+  background-color: #F2CD5D;
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+img {
+  border: 4px solid black;
+  border-radius: 50%;
+}
+
+/* effection */
+select:hover, h1:hover, img:hover, input:hover, textarea:hover, button:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px #b9780f;
+  cursor: pointer;
+}
+
+.item:focus {
+  transform: scale(1.05);
+  box-shadow: 5px 5px #b9780f;
+}
+
+h1:hover {
+  border: 3px solid #b9780f;
+}
+
+select, input, textarea, button {
+  text-align: left;
+  border: 3px solid black;
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input::placeholder, textarea::placeholder {
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: #b9780f;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* manage space */
+form .separator {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field .item {
+  width: 100%;
+  padding: 18px;
+  background: transparent;
+  outline: none;
+  margin: 12px 0;
+}
+
+.separator .input-field, .select-container {
+  width: 48.5%;
+}
+
+/* message box */
+#message {
+  resize: none;
+}
+
+/* button */
+#submit {
+  background-color: #DEA54B;
+  padding: 10px;
+}
+
+/* selection */
+option {
+  text-align: left;
+}
+
+select:required:invalid {
+  color: #b9780f;
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+
+/* footer */
+.fish {
+  font-size: 25px;
+}
+
+footer {
+  font-size: 18px;
+}
